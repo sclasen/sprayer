@@ -1,10 +1,10 @@
 # sprayer spray quick start
 
-* copy .env.sample to .env
+* copy `.env.sample` to `.env`
 * fill it out
 * run `forego run sbt`
 * in sbt run `~reStart`
-* go to http://localhost:5000/tables
+* go to [here](http://localhost:8080/tables)
 
 # whats here
 
