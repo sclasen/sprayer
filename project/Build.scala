@@ -28,7 +28,7 @@ object Build extends Build {
   )
 
   def deps = Seq(spray_routing, spray_client, spray_dynamo, akka,
-    slf4j, logback_classic, logback_core, scalaTest, akka_testkit)
+    slf4j, logback_classic, logback_core, spray_testkit, akka_testkit, scalaTest)
 
   val spray_routing = "io.spray" % "spray-routing" % "1.2-RC3" % "compile"
   val spray_client = "io.spray" % "spray-client" % "1.2-RC3" % "compile"
@@ -38,7 +38,10 @@ object Build extends Build {
   val logback_core = "ch.qos.logback" % "logback-core" % "1.0.3"
   val akka_testkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
   val spray_dynamo = "com.sclasen" %% "spray-dynamodb" % "0.2.1-SNAPSHOT"
+  val spray_testkit   = "io.spray" % "spray-testkit" % "1.2-RC3" % "test"
   val scalaTest   = "org.scalatest" %% "scalatest" % "2.0" % "test"
+
+
 
 }
 

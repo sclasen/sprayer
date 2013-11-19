@@ -16,3 +16,10 @@
 * project with spray/akka/logback/dynamodb in project/Build.scala
 * starter conf in src/main/resources
 * starter main class, http service (routes), http actor (runs routes) in `src/main/scala/example`
+
+# run on heroku
+
+* create a heroku app
+* add the config vars from .env
+* git push heroku master (will take quite a few minutes on first push/build)
+
