@@ -27,7 +27,7 @@ object Build extends Build {
     settings = buildSettings ++ Seq(libraryDependencies ++= deps)
   )
 
-  def deps = Seq(spray_routing, spray_client, spray_json, spray_dynamo, akka,
+  def deps = Seq(spray_routing, spray_client, spray_json, spray_dynamo, akka, slick, postgres,
     slf4j, logback_classic, logback_core, spray_testkit, akka_testkit, scalaTest)
 
   val spray_routing = "io.spray" % "spray-routing" % "1.2-RC3" % "compile"
@@ -37,6 +37,8 @@ object Build extends Build {
   val slf4j = "org.slf4j" % "slf4j-api" % "1.7.5"
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.0.3"
   val logback_core = "ch.qos.logback" % "logback-core" % "1.0.3"
+  val slick =   "com.typesafe.slick" %% "slick" % "2.0.0-M3"
+  val postgres =      "org.postgresql" % "postgresql" % "9.3-1100-jdbc41"
   val akka_testkit = "com.typesafe.akka" %% "akka-testkit" % "2.2.3" % "test"
   val spray_dynamo = "com.sclasen" %% "spray-dynamodb" % "0.2.1-SNAPSHOT"
   val spray_testkit   = "io.spray" % "spray-testkit" % "1.2-RC3" % "test"
