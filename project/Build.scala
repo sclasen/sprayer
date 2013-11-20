@@ -27,11 +27,12 @@ object Build extends Build {
     settings = buildSettings ++ Seq(libraryDependencies ++= deps)
   )
 
-  def deps = Seq(spray_routing, spray_client, spray_dynamo, akka,
+  def deps = Seq(spray_routing, spray_client, spray_json, spray_dynamo, akka,
     slf4j, logback_classic, logback_core, spray_testkit, akka_testkit, scalaTest)
 
   val spray_routing = "io.spray" % "spray-routing" % "1.2-RC3" % "compile"
   val spray_client = "io.spray" % "spray-client" % "1.2-RC3" % "compile"
+  val spray_json =  "io.spray" %%  "spray-json" % "1.2.5" % "compile"
   val akka = "com.typesafe.akka" %% "akka-actor" % "2.2.3" % "compile"
   val slf4j = "org.slf4j" % "slf4j-api" % "1.7.5"
   val logback_classic = "ch.qos.logback" % "logback-classic" % "1.0.3"
